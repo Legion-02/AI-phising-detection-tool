@@ -15,16 +15,16 @@ Detect phishing emails automatically by analyzing email content. Processes raw e
 ## 🧠 Technologies Used
 Python, Scikit-learn, Pandas, NumPy, NLTK, Matplotlib  
 
-## 📁 Project Structure
-AI-Phishing-Detection/
-├── data/raw/phishing_emails.csv
-├── src/preprocess.py
-├── src/train_model.py
-├── src/evaluate_model.py
-├── results/confusion_matrix.png
-├── results/accuracy.png
-├── requirements.txt
-└── README.md
+ ## 📁 Project Structure
+ AI-Phishing-Detection/
+ ├── data/raw/phishing_emails.csv
+ ├── src/preprocess.py
+ ├── src/train_model.py
+ ├── src/evaluate_model.py
+ ├── results/confusion_matrix.png
+ ├── results/accuracy.png
+ ├── requirements.txt
+ └── README.md
 
 
 ## ⚙️ Installation & Setup
