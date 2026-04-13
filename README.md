@@ -1,73 +1,85 @@
-🛡️ AI-Based Phishing Email Detection System
+# AI-Based Phishing Detection System with Tkinter GUI
 
-An end-to-end ML-powered phishing detection project that classifies emails as Phishing or Legitimate using NLP. SOC-analyst friendly, resume-ready, and GitHub-ready.
+A desktop phishing detection project that classifies email or message text as **Phishing** or **Safe** using NLP and machine learning. This version includes a **Tkinter GUI**, so it works like a local desktop tool similar to your WRM project.
 
-## 🚀 Project Overview
-Detect phishing emails automatically by analyzing email content. Processes raw email text, extracts features, and uses a ML model to classify messages.
+## Features  
+- Tkinter desktop interface  
+- Paste email or message content and analyze instantly  
+- Prediction label with confidence score  
+- Human-readable reason hints for the result  
+- Session history inside the GUI  
+- Separate training, prediction, and evaluation scripts  
+- Confusion matrix and accuracy chart generation  
 
-## ✨ Features
-- Phishing vs Legitimate classification  
-- NLP-based text preprocessing  
-- ML model training  
-- Performance evaluation: Accuracy, Precision, Recall, F1-score, Confusion matrix  
-- Beginner-friendly, well-structured codebase  
+## Project Structure
+```text
+AI-phising-detection-tool/
+├── data/
+│   └── raw/
+│       └── phishing_emails.csv
+├── models/
+│   └── phishing_model.pkl
+├── results/
+│   ├── accuracy.png
+│   └── confusion_matrix.png
+├── src/
+│   ├── evaluate_model.py
+│   ├── model_utils.py
+│   ├── predict.py
+│   ├── preprocess.py
+│   └── train_model.py
+├── tests/
+│   └── test_preprocess_and_predict.py
+├── gui.py
+├── requirements.txt
+├── .gitignore
+└── README.md
+```
 
-## 🧠 Technologies Used
-Python, Scikit-learn, Pandas, NumPy, NLTK, Matplotlib  
-
- ## 📁 Project Structure
- AI-Phishing-Detection/
- ├── data/raw/phishing_emails.csv
- ├── src/preprocess.py
- ├── src/train_model.py
- ├── src/evaluate_model.py
- ├── results/confusion_matrix.png
- ├── results/accuracy.png
- ├── requirements.txt
- └── README.md
-
-
-## ⚙️ Installation & Setup
-1. Install Python from https://www.python.org/downloads/ (check "Add Python to PATH")  
-2. Clone repository:  
+## Installation
 ```bash
-git clone https://github.com/yourusername/AI-Phishing-Detection.git
-cd AI-Phishing-Detection
-Install dependencies:
+python -m venv venv
+```
 
+### Windows
+```bash
+venv\Scripts\activate
 pip install -r requirements.txt
-▶️ How to Run
-Train model:
-
 python src/train_model.py
-Evaluate model:
+python gui.py
+```
 
+### Linux / Kali
+```bash
+source venv/bin/activate
+pip install -r requirements.txt
+python src/train_model.py
+python gui.py
+```
+
+## CLI Prediction Example
+```bash
+python src/predict.py --text "Urgent: click this link to reset your password now"
+```
+
+## Evaluate the Model
+```bash
 python src/evaluate_model.py
-Results saved in results/ folder.
+```
 
-📊 Sample Results
-Metric	Score
-Accuracy	88%
-Precision	0.91
-Recall	0.88
-F1-Score	0.88
-🎯 Use Cases
-SOC Analyst portfolio project
+## Packaging as EXE
+After testing the GUI, you can convert it into an executable with PyInstaller:
 
-Cybersecurity learning labs
+```bash
+pip install pyinstaller
+pyinstaller --onefile --windowed gui.py
+```
 
-Email threat detection research
+The executable will be created inside the `dist/` folder.
 
-Academic submissions
+## Notes
+- Run `python src/train_model.py` before opening the GUI if the model file does not exist yet.
+- `venv/`, `__pycache__/`, and `.pytest_cache/` should not be uploaded to GitHub.
 
-🔮 Future Enhancements
-Deep learning models (LSTM, BERT)
-
-Real-time email scanning
-
-Web dashboard interface
-
-REST API integration
-
-👨‍💻 Author
-Anush – Cybersecurity Enthusiast | SOC Analyst Aspirant
+## Author
+Anush - Cybersecurity Enthusiast
