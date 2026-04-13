@@ -2,14 +2,14 @@
 
 A desktop phishing detection project that classifies email or message text as **Phishing** or **Safe** using NLP and machine learning. This version includes a **Tkinter GUI**, so it works like a local desktop tool similar to your WRM project.
 
-## Features  
-- Tkinter desktop interface  
-- Paste email or message content and analyze instantly  
-- Prediction label with confidence score  
-- Human-readable reason hints for the result  
-- Session history inside the GUI  
-- Separate training, prediction, and evaluation scripts  
-- Confusion matrix and accuracy chart generation  
+## Features
+- Tkinter desktop interface
+- Paste email or message content and analyze instantly
+- Prediction label with confidence score
+- Human-readable reason hints for the result
+- Session history inside the GUI
+- Separate training, prediction, and evaluation scripts
+- Confusion matrix and accuracy chart generation
 
 ## Project Structure
 ```text
